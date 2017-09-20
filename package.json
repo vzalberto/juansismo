@@ -1,0 +1,15 @@
+{
+  "name": "in",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "monk": "^6.0.4",
+    "twit": "^2.2.9"
+  }
+}
