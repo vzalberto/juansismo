@@ -27,18 +27,15 @@ var stream = t.stream('statuses/filter', { track: keywords })
         const db = require('monk')(process.env.MONGO_URI)
     
         const tweets = db.get('tweets')
-        //const rt_tweets = db.get('rt_tweets')
 
         if(!isThisRT(tweet.text)){
 
-            console.log('legit');
-            tweets.insert(tweet).then((collection) => {db.close();}).catch((collection) => {console.log(collection)})
+            console.log('legit')
+            tweets.insert(tweet).then((collection) => {db.close()}).catch((collection) => {console.log(collection)})
         }
 
-        else{
-            //rt_tweets.insert(tweet).then((collection) => {db.close();}).catch((collection) => {console.log(collection)})
-            db.close();
-        }
+        else
+            db.close()
 
     })
 
